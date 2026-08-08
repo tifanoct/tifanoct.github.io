@@ -1,17 +1,19 @@
 /* ==========================================
-   NOCTIFA - Royal, Magical & Whimsical Theme
+   NOCTIFA - Magical Girl Celestial & Whimsical Theme
+   (Sailor Moon Starlight & Crescent Moon Edition)
    ========================================== */
 
 :root {
-  --bg-color: #0b0f19;
-  --bg-gradient: linear-gradient(135deg, #0b0f19 0%, #151b2e 50%, #1f1b2e 100%);
-  --card-bg: rgba(21, 27, 46, 0.7);
-  --text-primary: #f3f4f6;
-  --text-secondary: #cbd5e1;
-  --accent-gold: #f6d860;
-  --accent-magic: #a78bfa;
-  --accent-blue: #38bdf8;
-  --border-color: rgba(167, 139, 250, 0.2);
+  --bg-color: #0d0b1e;
+  --bg-gradient: radial-gradient(circle at 50% 15%, #231942 0%, #100c24 55%, #070512 100%);
+  --card-bg: rgba(26, 20, 48, 0.65);
+  --text-primary: #fff1f2;
+  --text-secondary: #fbcfe8;
+  --accent-gold: #fde047;
+  --accent-pink: #f472b6;
+  --accent-sparkle: #e879f9;
+  --accent-starlight: #93c5fd;
+  --border-color: rgba(244, 114, 182, 0.3);
   --font-main: 'Cinzel', 'Georgia', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -27,6 +29,30 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Magical Shimmering Starry & Crescent Moon Sparkle Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(2px 2px at 25px 35px, #fde047, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 60px 90px, #f472b6, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 120px 50px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 180px 150px, #e879f9, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 260px 220px, #93c5fd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 320px 100px, #fde047, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  opacity: 0.45;
+  z-index: -1;
 }
 
 /* Layout Container */
@@ -34,68 +60,86 @@ body {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   box-sizing: border-box;
 }
 
-/* Header & Navigation */
+/* Header & Magical Navigation */
 header {
   text-align: center;
   padding: 3rem 0 2rem 0;
   border-bottom: 1px solid var(--border-color);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
 }
 
+/* Crescent Moon & Magical Ribbon Motif */
 header h1 {
   font-family: var(--font-main);
-  font-size: 2.75rem;
+  font-size: 3.2rem;
   color: var(--accent-gold);
   margin: 0 0 0.5rem 0;
-  letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(246, 216, 96, 0.3);
+  letter-spacing: 3px;
+  text-shadow: 0 0 25px rgba(253, 224, 71, 0.5), 0 0 10px rgba(244, 114, 182, 0.4);
+}
+
+header h1::before {
+  content: "🌙✨ ";
+  font-size: 2.4rem;
+  vertical-align: middle;
 }
 
 header p {
-  color: var(--accent-magic);
+  color: var(--accent-pink);
   font-style: italic;
-  font-size: 1.1rem;
-  margin: 0 0 1.5rem 0;
+  font-size: 1.15rem;
+  margin: 0 0 1.75rem 0;
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.3);
 }
 
 nav a {
   color: var(--text-secondary);
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 1.25rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 nav a:hover {
   color: var(--accent-gold);
-  text-shadow: 0 0 10px rgba(246, 216, 96, 0.5);
+  text-shadow: 0 0 12px rgba(253, 224, 71, 0.7);
 }
 
-/* Content Cards */
+/* Whimsical Magical Glass Cards */
 main article, .content-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 2.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2.5rem;
+  box-shadow: 0 12px 45px rgba(13, 11, 30, 0.7), inset 0 0 25px rgba(244, 114, 182, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+main article:hover {
+  border-color: rgba(253, 224, 71, 0.5);
 }
 
 h2, h3 {
   font-family: var(--font-main);
   color: var(--accent-gold);
   margin-top: 0;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 1.8rem;
-  border-bottom: 1px solid rgba(246, 216, 96, 0.2);
-  padding-bottom: 0.5rem;
+  font-size: 1.9rem;
+  border-bottom: 1px solid rgba(244, 114, 182, 0.3);
+  padding-bottom: 0.6rem;
   margin-bottom: 1.5rem;
 }
 
@@ -109,34 +153,48 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .feature-box {
-  background: rgba(11, 15, 25, 0.5);
+  background: rgba(16, 12, 36, 0.65);
   border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 1.75rem;
+  border-radius: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-box:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-gold);
+  transform: translateY(-5px);
+  border-color: var(--accent-pink);
+  box-shadow: 0 6px 25px rgba(244, 114, 182, 0.2);
 }
 
 .feature-box h3 {
-  font-size: 1.2rem;
-  color: var(--accent-blue);
+  font-size: 1.25rem;
+  color: var(--accent-pink);
   margin-bottom: 0.75rem;
+}
+
+/* Image Frames with Soft Glow */
+article img {
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+article img:hover {
+  transform: scale(1.01);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-color);
   width: 100%;
+  margin-top: auto;
 }
