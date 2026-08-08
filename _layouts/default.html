@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Noctifa</title>
+    <!-- Import Google Fonts for Royal/Fantasy vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Link to custom standalone CSS theme file -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <h1>Noctifa</h1>
+            <p>The Enchanting Crossover Ship: Noctis Lucis Caelum & Tifa Lockhart</p>
+            <nav>
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/compatibility/' | relative_url }}">Compatibility</a>
+                <a href="{{ '/fan-art/' | relative_url }}">Fan Art & Fiction</a>
+            </nav>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+            <p>&copy; {{ 'now' | date: "%Y" }} Noctifa.com. Built with imagination and magic.</p>
+            <p style="font-size: 0.8rem; font-style: italic;">Life is too short, ship what you want! Let's keep things healthy and respectful.</p>
+        </footer>
+    </div>
+</body>
+</html>
