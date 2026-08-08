@@ -1,20 +1,17 @@
 /* ==========================================
-   NOCTIFA - Royal, Whimsical Celestial Theme
-   (Deep Blue, Aqua & Starlight Edition)
+   NOCTIFA - Royal, Whimsical Celestial Night Sky
    ========================================== */
 
 :root {
-  --bg-color: #03081b;
-  --bg-gradient: radial-gradient(circle at 50% 15%, #081b3d 0%, #030a1c 55%, #01040d 100%);
-  --card-bg: rgba(6, 22, 48, 0.7);
+  --bg-color: #030614;
+  --bg-gradient: radial-gradient(circle at 50% 20%, #0d1b3a 0%, #050a1f 50%, #02040b 100%);
+  --card-bg: rgba(6, 18, 40, 0.75);
   --text-primary: #f0fdf4;
   --text-secondary: #bae6fd;
   --accent-gold: #fde047;
-  --accent-blue-deep: #0b2545;
-  --accent-cerulean: #134074;
   --accent-aqua: #00b4d8;
   --accent-cyan: #00f0ff;
-  --border-color: rgba(0, 180, 216, 0.3);
+  --border-color: rgba(0, 240, 255, 0.25);
   --font-main: 'Cinzel', 'Georgia', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -34,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Celestial Starry & Crystal Sparkle Effect */
+/* Whimsical Celestial Night Sky & Nebula Glow */
 body::before {
   content: "";
   position: fixed;
@@ -44,14 +41,20 @@ body::before {
   height: 100%;
   pointer-events: none;
   background-image: 
+    /* Glowing Nebula Orbs */
+    radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(0, 240, 255, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(253, 224, 71, 0.05) 0%, transparent 50%),
+    /* Layered Twinkling Star Particles */
     radial-gradient(2px 2px at 25px 35px, #fde047, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 70px 90px, #00f0ff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 130px 50px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 190px 150px, #00b4d8, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 270px 220px, #93c5fd, rgba(0,0,0,0));
+    radial-gradient(2px 2px at 90px 140px, #00f0ff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 160px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 220px 210px, #00b4d8, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 310px 110px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 380px 290px, #bae6fd, rgba(0,0,0,0));
   background-repeat: repeat;
-  background-size: 300px 300px;
-  opacity: 0.45;
+  background-size: 400px 400px;
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -120,12 +123,13 @@ main article, .content-card {
   border-radius: 20px;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
-  box-shadow: 0 12px 45px rgba(2, 6, 23, 0.8), inset 0 0 25px rgba(0, 180, 216, 0.1);
+  box-shadow: 0 12px 45px rgba(2, 6, 23, 0.8), inset 0 0 25px rgba(0, 180, 216, 0.08);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 main article:hover {
-  border-color: rgba(0, 240, 255, 0.5);
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 15px 50px rgba(2, 6, 23, 0.9), inset 0 0 30px rgba(0, 240, 255, 0.15);
 }
 
 h2, h3 {
@@ -156,7 +160,7 @@ p {
 }
 
 .feature-box {
-  background: rgba(4, 15, 35, 0.7);
+  background: rgba(4, 15, 35, 0.75);
   border: 1px solid var(--border-color);
   padding: 1.75rem;
   border-radius: 14px;
@@ -166,7 +170,7 @@ p {
 .feature-box:hover {
   transform: translateY(-5px);
   border-color: var(--accent-cyan);
-  box-shadow: 0 6px 25px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 6px 25px rgba(0, 240, 255, 0.25);
 }
 
 .feature-box h3 {
