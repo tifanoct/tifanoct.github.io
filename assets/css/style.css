@@ -61,30 +61,22 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 1px;
+  height: 1px;
+  background: transparent;
   z-index: -99;
   pointer-events: none;
-  background: transparent;
-}
-
-.stars::after {
-  content: "";
-  position: absolute;
-  top: -10rem;
-  left: -10rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
   box-shadow: 
-    100vw 200vh 1px #ffffff,
-    20vw 50vh 2px var(--text-secondary),
-    50vw 120vh 1px var(--accent-cyan),
-    150vw 80vh 2px #ffffff,
-    80vw 220vh 1px var(--accent-gold),
-    200vw 30vh 2px #ffffff,
-    30vw 180vh 1px var(--accent-aqua),
-    120vw 150vh 2px #ffafcc;
+    15vw 10vh 1px #ffffff,
+    45vw 25vh 2px var(--text-secondary),
+    80vw 15vh 1px var(--accent-cyan),
+    25vw 65vh 2px #ffffff,
+    60vw 80vh 1px var(--accent-gold),
+    90vw 50vh 2px #ffffff,
+    10vw 85vh 1px var(--accent-aqua),
+    70vw 35vh 2px #ffafcc,
+    35vw 40vh 1px #ffffff,
+    55vw 10vh 2px var(--accent-cyan);
   animation: twinkle 4s ease-in-out infinite alternate;
 }
 
