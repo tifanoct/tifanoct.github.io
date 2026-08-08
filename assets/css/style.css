@@ -1,0 +1,142 @@
+/* ==========================================
+   NOCTIFA - Royal, Magical & Whimsical Theme
+   ========================================== */
+
+:root {
+  --bg-color: #0b0f19;
+  --bg-gradient: linear-gradient(135deg, #0b0f19 0%, #151b2e 50%, #1f1b2e 100%);
+  --card-bg: rgba(21, 27, 46, 0.7);
+  --text-primary: #f3f4f6;
+  --text-secondary: #cbd5e1;
+  --accent-gold: #f6d860;
+  --accent-magic: #a78bfa;
+  --accent-blue: #38bdf8;
+  --border-color: rgba(167, 139, 250, 0.2);
+  --font-main: 'Cinzel', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* Layout Container */
+.site-wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Header & Navigation */
+header {
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: var(--font-main);
+  font-size: 2.75rem;
+  color: var(--accent-gold);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(246, 216, 96, 0.3);
+}
+
+header p {
+  color: var(--accent-magic);
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-gold);
+  text-shadow: 0 0 10px rgba(246, 216, 96, 0.5);
+}
+
+/* Content Cards */
+main article, .content-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+  font-family: var(--font-main);
+  color: var(--accent-gold);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(246, 216, 96, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+/* Grid Layouts for Sections */
+.grid-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-box {
+  background: rgba(11, 15, 25, 0.5);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-gold);
+}
+
+.feature-box h3 {
+  font-size: 1.2rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
