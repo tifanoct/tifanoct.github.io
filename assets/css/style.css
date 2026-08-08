@@ -56,6 +56,47 @@ body::before {
   z-index: -1;
 }
 
+/* Dynamic Twinkling Starfield Container */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  pointer-events: none;
+  background: transparent;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 
+    100vw 200vh 1px #ffffff,
+    20vw 50vh 2px var(--text-secondary),
+    50vw 120vh 1px var(--accent-cyan),
+    150vw 80vh 2px #ffffff,
+    80vw 220vh 1px var(--accent-gold),
+    200vw 30vh 2px #ffffff,
+    30vw 180vh 1px var(--accent-aqua),
+    120vw 150vh 2px #ffafcc;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Layout Container */
 .site-wrapper {
   max-width: 900px;
