@@ -231,4 +231,93 @@ footer {
   border-top: 1px solid var(--border-color);
   width: 100%;
   margin-top: auto;
+}/* Article Layout Styles */
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left !important; /* Overrides the center alignment of home page */
+}
+
+.article-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.article-subtitle {
+  font-style: italic;
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+}
+
+/* Two-column grid (Wikipedia-style) */
+.article-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.article-body h3 {
+  color: var(--accent-aqua);
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.article-body p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Wikipedia-style Quote Block */
+.article-body blockquote {
+  border-left: 4px solid var(--accent-gold);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  background: rgba(253, 224, 71, 0.05);
+  font-style: italic;
+  color: var(--text-primary);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Sidebar / Infobox */
+.article-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.infobox {
+  background: rgba(4, 15, 35, 0.85);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.image-caption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.infobox-details {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.infobox-details p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+/* Responsive for Mobile phones */
+@media (max-width: 768px) {
+  .article-layout {
+    grid-template-columns: 1fr; /* Stacks image/sidebar above text on mobile */
+  }
 }
