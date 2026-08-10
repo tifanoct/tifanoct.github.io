@@ -7,11 +7,21 @@ title: Compatibility Hub
   <h2 style="color: #00f0ff;">Noctis x Tifa Compatibility</h2>
   <p>Let's dive into why Noctis and Tifa just make so much sense together, looking at how their storylines, mindsets, and journeys across different universes actually line up.</p>
   
-  <!-- Single Banner Image -->
-  <div style="margin: 2rem 0;">
-    <img src="{{ '/assets/images/images_couple_pondering.webp' | relative_url }}" 
-         alt="Noctis and Tifa Pondering" 
-         style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0, 240, 255, 0.3);">
+  <!-- Balanced Two-Image Banner with Mirrored Tifa -->
+  <div style="display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; width: 100%;">
+    <!-- Tifa Image (Mirrored to face right) -->
+    <div style="flex: 1; overflow: hidden; border-radius: 8px; border: 1px solid rgba(0, 240, 255, 0.3); line-height: 0;">
+      <img src="{{ '/assets/images/tifa left.webp' | relative_url }}" 
+           alt="Tifa Lockhart" 
+           style="width: 100%; height: 300px; object-fit: cover; transform: scaleX(-1);">
+    </div>
+    
+    <!-- Noctis Image (Faces left naturally) -->
+    <div style="flex: 1; overflow: hidden; border-radius: 8px; border: 1px solid rgba(0, 240, 255, 0.3); line-height: 0;">
+      <img src="{{ '/assets/images/noctis right.webp' | relative_url }}" 
+           alt="Noctis Lucis Caelum" 
+           style="width: 100%; height: 300px; object-fit: cover;">
+    </div>
   </div>
 
   <div class="grid-features">
